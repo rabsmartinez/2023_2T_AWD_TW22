@@ -1,0 +1,316 @@
+/*  */
+/* background-color: #2e4799; */
+/* background-color: #2e4799; Change to the desired highlight color */
+/* background-color: #752626; Set background color for the container */
+/* background-color: #99ba36; Set background color for the container */
+/* styles.css
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.itl.cat/pngfile/big/293-2935591_hoenn-pokemon-go-4k-hd-games-4k-wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  width: 100%;
+}
+
+.off-screen-menu {
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.off-screen-menu ul {
+  display: flex;
+  gap: 25px;
+  text-transform: uppercase;
+  font-family: 'poppins';
+  font-weight: 700;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.off-screen-menu ul a {
+  text-decoration: none;
+  color: #f2f2f2;
+  transition: all 0.5s ease;
+}
+.off-screen-menu ul a:hover {
+  color: #00ff2a;
+  border-bottom: 1px solid #fff;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+header {
+  background-color: #00004d;
+}
+
+.off-screen-menu img {
+  width: 250px;
+}
+nav img {
+  width: 150px;
+}
+.footer_title {
+  background-color: #00004d;
+  color: #fff;
+  font-family: 'poppins';
+}
+.footer_title p {
+  margin-bottom: 0 !important;
+}
+.hide-l {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hide-sm {
+    display: none;
+  }
+  .hide-l {
+    display: block;
+  }
+
+  .off-screen-menu ul {
+    flex-direction: column;
+  }
+  .off-screen-menu {
+    background-color: #00004d;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+  .ham-menu {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #6f86ff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+
+  .ham-menu span:nth-child(3) {
+    top: 75%;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .cartContainer {
+    flex-direction: column;
+  }
+}
+
+/* main */
+
+main section.main-hero {
+  border-radius: 20px;
+  margin-top: 15px;
+  height: 350px;
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/pokemongo1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  display: flex;
+  box-shadow: 1px 1px 1px #000;
+}
+
+main section.main-hero p {
+  align-self: self-end;
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.289rem;
+  font-weight: bold;
+}
+
+main section.card-body {
+  border-radius: 20px;
+  margin-top: 15px;
+  height: 350px;
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/pokemongo2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 1rem;
+  box-shadow: 1px 1px 1px #000;
+}
+main section.card-body p,
+main section.pokecoins p {
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.289rem;
+  font-weight: bold;
+}
+/* item boxes */
+main section.item_b1 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/box_1.png);
+}
+main section.item_b2 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/box_2.png);
+}
+/* bags */
+main section.bag1 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/bag_1.png);
+  object-fit: cover;
+  background-size: cover;
+}
+main section.bag2 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/bag_2.png);
+  object-fit: cover;
+  background-size: cover;
+}
+main section.bag3 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/bag_3.png);
+  object-fit: cover;
+  background-size: cover;
+}
+/* poke coins */
+
+main section.coins_1 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/coins_1.png);
+}
+main section.coins_2 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/coins_2.png);
+}
+main section.coins_3 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/coins_3.png);
+}
+
+main section.coins_4 {
+  background-image: linear-gradient(
+      rgba(5, 5, 5, 0.173),
+      rgba(17, 17, 17, 0.756)
+    ),
+    url(/assets/images/coins_4.png);
+}
+.h1_title {
+  color: #ffffff !important;
+  text-shadow: 1px 1px 1px #000;
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1439px) {
+  .poke-coins {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 1439px) and (max-width: 2560px) {
+  .poke-coins,
+  .item-boxes {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+.btn_cart button > a,
+.poke-coins section button > a {
+  color: #f2f2f2 !important;
+  text-decoration: none;
+}
+
+.cartContainer {
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pokemon Go</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="png" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/checkout.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="off-screen-menu container">
+        <img class="hide-sm" src="./assets/images/yoko.png" alt="" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="transaction.html">Transaction</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+      <nav>
+        <img class="hide-l" src="./assets/images/yoko.png" alt="" />
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <h2 class="text-center fw-bold text-uppercase text-white text-cart">
+      Shopping cart
+    </h2>
+    <main class="container">
+      <section class="main-cont">
+        <section class="poke-coins cart-item-n">
+          <section class="card-body cart-item-body coins_1 container">
+            <p>Pokémon GO Fest 2024: Global Ticket</p>
+            <p>₱439.10</p>
+            <div class="quantity">
+              <button class="btn btn-primary decrement">-</button>
+              <input class="inputQ" type="number" value="1" min="1" />
+              <button class="btn btn-primary increment">+</button>
+            </div>
+          </section>
+          <section class="card-body cart-item-body coins_2 container">
+            <p>Pokémon GO Fest 2024: Global Ticket</p>
+            <p>₱439.10</p>
+            <div class="quantity">
+              <button class="btn btn-primary decrement">-</button>
+              <input class="inputQ" type="number" value="1" min="1" />
+              <button class="btn btn-primary increment">+</button>
+            </div>
+          </section>
+          <section class="card-body cart-item-body coins_3 container">
+            <p>Pokémon GO Fest 2024: Global Ticket</p>
+            <p>₱439.10</p>
+            <div class="quantity">
+              <button class="btn btn-primary decrement">-</button>
+              <input class="inputQ" type="number" value="1" min="1" />
+              <button class="btn btn-primary increment">+</button>
+            </div>
+          </section>
+          <section class="card-body cart-item-body coins_4 container">
+            <p>Pokémon GO Fest 2024: Global Ticket</p>
+            <p>₱439.10</p>
+            <div class="quantity">
+              <button class="btn btn-primary decrement">-</button>
+              <input class="inputQ" type="number" value="1" min="1" />
+              <button class="btn btn-primary increment">+</button>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="side-cont">
+        <p class="text-center text-uppercase">Item total: 360</p>
+        <div class="d-grid gap-2">
+          <button type="button" name="" id="buyBtn" class="btn btn-success">
+            Checkout now
+          </button>
+        </div>
+      </section>
+    </main>
+    <div class="download-img container">
+      <img src="./assets/images/download.png" class="img-fluid" alt="..." />
+    </div>
+    <footer class="mt-2">
+      <section class="footer_title text-center p-2">
+        <p>
+          " For educational purposes only and no copyright infringement is
+          intended "
+        </p>
+      </section>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/scripts/script.js"></script>
+    <script>
+      const decrementButtons = document.querySelectorAll('.decrement');
+      const incrementButtons = document.querySelectorAll('.increment');
+
+      decrementButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const quantityInput = button.parentElement.querySelector('.inputQ');
+          const currentValue = parseInt(quantityInput.value);
+          if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+          }
+        });
+      });
+
+      incrementButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const quantityInput = button.parentElement.querySelector('.inputQ');
+          const currentValue = parseInt(quantityInput.value);
+          quantityInput.value = currentValue + 1;
+        });
+      });
+
+      const buyBtn = document.getElementById('buyBtn');
+      buyBtn.addEventListener('click', () => {
+        const quantities = document.querySelectorAll('.inputQ');
+        let totalItems = 0;
+        quantities.forEach((input) => {
+          totalItems += parseInt(input.value);
+        });
+        alert(`Total items: ${totalItems}`);
+        // Add further logic for checkout here
+      });
+    </script>
+  </body>
+</html>

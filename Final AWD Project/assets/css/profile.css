@@ -1,0 +1,72 @@
+main {
+  width: 50% !important;
+  text-align: center;
+  font-size: 1.578rem;
+  background-image: linear-gradient(#ffffff59, #00000090);
+  height: 60vh;
+  margin: 50px;
+  color: #ffff;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px #000;
+}
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginContainer form {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90% !important;
+    font-size: 1rem;
+  }
+}
+.buttons button > a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.formSignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px auto;
+  background-color: #f2f2f2d3;
+  width: 50%;
+  padding: 20px;
+  box-shadow: 1px 1px 12px black;
+  border-radius: 20px;
+}
+.main-content img {
+  width: 250px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.inputText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 50%;
+}
+input {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
